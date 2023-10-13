@@ -21,7 +21,7 @@ public class InvokeAsyncClient {
         String functionName = "WaitFunction";
         Region region = Region.US_WEST_2;
         LambdaAsyncClient awsLambda = LambdaAsyncClient.builder()
-                .httpClient(NettyNioAsyncHttpClient.builder().readTimeout(Duration.ofSeconds(332)).build())
+                .httpClient(NettyNioAsyncHttpClient.builder().readTimeout(Duration.ofMinutes(11)).build())
                 .region(region)
                 .build();
 
