@@ -23,9 +23,9 @@ public class Invoke {
                 .region(region)
                 .httpClientBuilder(ApacheHttpClient.builder()
                         .maxConnections(100)
-                        .socketTimeout(Duration.ofMillis(310000)))
+                        .socketTimeout(Duration.ofMinutes(11)))
                 .overrideConfiguration(
-                        b -> b.apiCallTimeout(Duration.ofMillis(310000)))
+                        b -> b.apiCallTimeout(Duration.ofMinutes(11)))
 
                 .build();
 
